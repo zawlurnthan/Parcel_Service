@@ -1,0 +1,60 @@
+# Zaw Than, Student ID:#001368744
+
+
+The Western Governors University Parcel Service (WGUPS)
+------------------------------------------------------
+
+
+A.      In this program (University Parcel Service), Greedy Algorithm is used to load and Nearest Neighbor Algorithm is used to find sorted route in delivering the packages.
+
+B.2     This program is written with Python version 3.9 and PyCharm IDE is used in local machine. All csv data files are stored in same project.
+
+B.4     In case of growing number of packages, There will be a number of series chain in hash table because of fix capacity of hash table. No matter what number of packages are in hash table, time complexity won't change in worst case scenario. It'll remain as O(N^2).
+
+B.5     Program is split by classes with required functions. The code in this program is not slower than time complexity O(N^2). My program can be concluded as efficient and faster.
+        Having appropriate comments, simple code structure and descriptive variables and function names are used in the program. That is why my program is documented readable and easy to maintain it.
+
+B.6     The strengths of the self-adjusting data structures like a hash table could be as fast as constant time O(1) in inserting, searching and removing.
+        The weaknesses of the self-adjusting data structures like a hash table could have collisions and it will slow down the speed to linear time O(N).
+
+        The collision of the hash table can be solved in different methods as chaining, linear probing, quadratic probing, double hashing, and direct hashing.
+        In the chaining hash table, hash table buckets are initialized as empty lists. In inserting, compute the bucket index and insert an item to the list at the computed index.
+        In searching, compute the bucket index and return an item from the list. In removing, compute the bucket index and remove the item from the list.
+        Since the hash table is large enough for all packages, there won't be a collision in my program.
+
+D.      Self-adjusting data structure, such as a Chaining hash table can be used with Greedy Algorithm which is to select and load packages to the truck.
+        Because of fix capacity of Chaining Hash Table, it has a number of chains in storing data at hash table. It has to use double loop when transferring data. It will be slow in speed of transferring data.
+
+D.1     Chaining hash table can be constructed with desired capacity although default capacity is 10. Package's id is used as key to create hash key. Inserting package, searching and removing by using key is pretty fast as constant time.
+
+I.1     (i) load_truck function use "Greedy Algorithm" which is quadratic time O(N^2).
+        (ii) Able to select specific packages by different requirements and to load multiple trucks simultaneously.
+
+        (i) Both get_route and get_shortest path functions use "Nearest Neighbor algorithm" which is as fast as linear time O(N).
+        (ii) Able to search shortest distance of current location and sort location point by point entire route of a truck.
+
+I.2     By using these two algorithms mentioned in part A, all deadlines meet requirement and all truck mileages is under 140 miles.
+
+I.3     "Activity selection problem algorithm", "Dijkstra's shortest path algorithm"
+
+I.3.a   Activity selection problem algorithm sorts items in ascending order and keeps all selected items in a list.
+        Activity selection problem algorithm could be used in selecting and loading packages to the truck. But it will require to modify and add a few step of code to meet current program requirement.
+
+        Dijkstra's shortest path algorithm finds the shortest distance from a current vertex to neighborhood vertices in the graph.
+        Dijkstra's shortest path could be used to find next location of delivery route. But, it is complex to implement and requires more code than algorithm I use here..
+
+J.      If I've extra time, I want to merge get_route and get_shortest_path functions to be more efficient and shorter code.
+
+K.1.a   Increasing number of packages will have several collisions in the hash table. In the chaining hash table, there will be a list in evey collision.
+        Time complexity of searching a hash table will change from constant O(1) to linear O(N) in worst case scenario.
+
+K.1.b   More space will be needed as increase number of packages to be delivered.
+K.1.c   It will need more time if the number of cities changes, and more time for each truck will be needed if the number of trucks decreases as in linear time complexity.
+        More cities will need more spaces. In more trucks case, less space for each truck, and in less truck case, more space for each truck will be needed.
+
+K.2     "Linear probing Hash table", "Direct hashing table"
+K.2.a   Linear probing Hash table uses key as other hash table do. In case of collision, it linearly searches subsequent buckets until an empty bucket is found.
+        Direct hashing table uses key directly as index. There won't be collision but hash table should be large enough for all items.
+
+
+                 ***    The rest of requirements are in the code section.   ***
